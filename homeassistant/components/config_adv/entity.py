@@ -14,7 +14,7 @@ CONFIG_PATH = 'customize.yaml'
 def async_setup(hass):
     """Set up the Customize config API."""
     hass.http.register_view(EntityConfigView(
-        'entity-list', 'config_adv', CONFIG_PATH, cv.entity_id, dict,
+        'entity', 'config_adv', CONFIG_PATH, cv.entity_id, dict,
         post_write_hook=async_reload_core_config
     ))
 
