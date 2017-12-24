@@ -66,8 +66,8 @@ class BaseEditConfigView(HomeAssistantView):
     def __init__(self, component, config_type, path, key_schema, data_schema,
                  *, post_write_hook=None):
         """Initialize a config view."""
-        self.url = '/api/config_adv/%s/%s/{config_key}' % (component, config_type)
-        self.name = 'api:config_adv:%s:%s' % (component, config_type)
+        self.url = '/api/config/%s/%s/{config_key}' % (component, config_type)
+        self.name = 'api:config:%s:%s' % (component, config_type)
         self.path = path
         self.key_schema = key_schema
         self.data_schema = data_schema
